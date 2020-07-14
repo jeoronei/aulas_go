@@ -1,3 +1,6 @@
-# ola_mundo_go
-Este projeto tem por finalidade implementar o famoso 'Olá, mundo!', porém, utilizando a linguagem Go.
-link para o tutorial utilizado: https://larien.gitbook.io/aprenda-go-com-testes/primeiros-passos-com-go/ola-mundo
+# Aulas Go
+Este projeto tem por finalidade estudar/implementar o conteúdo contido no link : https://larien.gitbook.io/aprenda-go-com-testes/primeiros-passos-com-go/ola-mundo
+
+## Conteudo das Aulas
+* Aula 1: Olá mundo
+* Aula 2: Inteiros
