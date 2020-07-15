@@ -6,4 +6,4 @@ func Repetir(caractere string, quantidadeRepeticoes int) string {
 		repeticoes += caractere
 	}
 	return repeticoes
-}
+} 

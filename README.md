@@ -5,3 +5,4 @@ Este projeto tem por finalidade estudar/implementar o conteúdo contido no link 
 * Aula 1: Olá mundo
 * Aula 2: Inteiros
 * Aula 3: Iteração
+* Aula 4: Arrays e Slices
