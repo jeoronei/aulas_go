@@ -6,3 +6,4 @@ Este projeto tem por finalidade estudar/implementar o conteúdo contido no link 
 * Aula 2: Inteiros
 * Aula 3: Iteração
 * Aula 4: Arrays e Slices
+* Aula 5: Estruturas, métodos e interfaces
