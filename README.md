@@ -8,3 +8,4 @@ Este projeto tem por finalidade estudar/implementar o conteúdo contido no link 
 * Aula 4: Arrays e Slices
 * Aula 5: Estruturas, métodos e interfaces
 * Aula 6: Ponteiros e erros
+* Aula 7: Maps
