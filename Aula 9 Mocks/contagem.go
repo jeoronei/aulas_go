@@ -9,15 +9,11 @@ import (
 
 const ultimaPalavra = "Vai!"
 const inicioContagem = 3
+const escrita = "escrita"
+const pausa = "pausa"
 
 type Sleeper interface {
 	Pausa()
-}
-
-type SleeperPadrao struct {}
-
-func(d *SleeperPadrao) Pausa() {
-	time.Sleep(1 * time.Second)
 }
 
 type SleeperSpy struct {
@@ -26,6 +22,36 @@ type SleeperSpy struct {
 
 func (s *SleeperSpy) Pausa() {
 	s.Chamadas++
+}
+
+type SpyContagemOperacoes struct {
+	Chamadas []string
+}
+
+func (s *SpyContagemOperacoes) Pausa() {
+	s.Chamadas = append(s.Chamadas, pausa)
+}
+
+func (s *SpyContagemOperacoes) Write(p []byte) (n int, err error) {
+	s.Chamadas = append(s.Chamadas, escrita)
+	return
+}
+
+type SleeperConfiguravel struct {
+	duracao time.Duration
+	pausa func(time.Duration)
+}
+
+type TempoSpy struct {
+	duracaoPausa time.Duration
+}
+
+func (t *TempoSpy) Pausa(duracao time.Duration) {
+	t.duracaoPausa = duracao
+}
+
+func (s *SleeperConfiguravel) Pausa() {
+	s.pausa(s.duracao)
 }
 
 func Contagem(saida io.Writer, sleep Sleeper) {
@@ -39,6 +65,6 @@ func Contagem(saida io.Writer, sleep Sleeper) {
 }
 
 func main() {
-	sleeper := &SleeperPadrao{}
+	sleeper := &SleeperConfiguravel{1 * time.Second, time.Sleep}
 	Contagem(os.Stdout, sleeper)
 }

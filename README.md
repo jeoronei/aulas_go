@@ -10,3 +10,4 @@ Este projeto tem por finalidade estudar/implementar o conteúdo contido no link 
 * Aula 6: Ponteiros e erros
 * Aula 7: Maps
 * Aula 8: Injeção de dependência
+* Aula 9: Mocks
